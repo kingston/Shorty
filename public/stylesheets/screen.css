@@ -1,0 +1,51 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 8, ../../app/stylesheets/screen.scss */
+body {
+  background: #FFFFFF;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ccccff), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #ccccff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ccccff, #ffffff);
+  background-image: -o-linear-gradient(top, #ccccff, #ffffff);
+  background-image: linear-gradient(top, #ccccff, #ffffff);
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+/* line 17, ../../app/stylesheets/screen.scss */
+#header, #main-content,
+#wrapper {
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -o-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -khtml-border-radius: 10px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  margin-top: 10px;
+}
+
+/* line 24, ../../app/stylesheets/screen.scss */
+#header .banner {
+  font-size: 3em;
+  font-weight: bold;
+  color: #DD8811;
+}
+/* line 30, ../../app/stylesheets/screen.scss */
+#header .subtitle {
+  font-weight: bold;
+  font-style: italic;
+  color: #DD8811;
+}
+
+/* line 37, ../../app/stylesheets/screen.scss */
+#main-content {
+  /* Nothing here */
+}
+
+/* line 41, ../../app/stylesheets/screen.scss */
+#footer {
+  color: #999999;
+}

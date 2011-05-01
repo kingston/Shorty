@@ -8,6 +8,11 @@ gem 'rails', '~> 3.0.7'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails', '>= 0.2.6'
 
+# Using Compass CSS framework
+
+gem 'compass', '>= 0.11.1'
+gem 'compass-960-plugin'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

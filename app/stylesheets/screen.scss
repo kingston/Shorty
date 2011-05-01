@@ -1,0 +1,41 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "base";
+
+body {
+  background: #FFFFFF;
+  @include background-image(linear-gradient(top, #CCCCFF, white));
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+#wrapper {
+  @include border-radius(10px);
+  background-color: #FFFFFF;
+  margin-top: 10px;
+}
+
+#header {
+  .banner {
+    font-size: 3em;
+    font-weight: bold;
+    color: #DD8811;
+  }
+  
+  .subtitle {
+    font-weight: bold;
+    font-style: italic;
+    color: #DD8811;
+  }
+}
+
+#main-content {
+  /* Nothing here */
+}
+
+#footer {
+  color: #999999;
+}
