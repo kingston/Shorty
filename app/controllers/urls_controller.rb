@@ -1,4 +1,9 @@
+require 'bcrypt'
+
 class UrlsController < ApplicationController
+  include BCrypt
+  before_filter :authenticate, :except => :redirect
+
   def index
     @urlEntry = UrlEntry.new
     @entries = UrlEntry.all
@@ -56,5 +61,13 @@ class UrlsController < ApplicationController
   def redirect
     @entry = UrlEntry.find_by_key(params[:key]) || not_found
     redirect_to @entry.url
+  end
+  
+protected
+
+  def authenticate
+    authenticate_or_request_with_http_basic do |username, password|
+      Password.new("$2a$10$XAUwYLqAKyOkk2ro9n8Ka.160xDNGP0qwgfI0srzQXUBfzC5I4vsS") == password
+    end
   end
 end

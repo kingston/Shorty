@@ -13,6 +13,10 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'compass', '>= 0.11.1'
 gem 'compass-960-plugin'
 
+# A small bit of security
+
+gem 'bcrypt-ruby', '>= 2.1.4'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
