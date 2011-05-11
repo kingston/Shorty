@@ -1,10 +1,13 @@
 Source::Application.routes.draw do
-  get "urls/index"
-
-  get "urls/delete"
+  resources :url_entries, :path => "urls",
+                          :controller => "urls",
+                          :only => [ :index, :create, :update, :destroy ]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
+  
+  # Match URL redirect route
+  match ":key" => "urls#redirect", :key => /[^\/]+/
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

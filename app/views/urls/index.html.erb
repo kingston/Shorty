@@ -1,2 +1,38 @@
-<h1>Urls#index</h1>
-<p>Find me in app/views/urls/index.html.erb</p>
+<% if flash.include?(:notice) %>
+<div class="notice">
+	<%= flash[:notice] %>
+</div>
+<% end %>
+<div id="url-box">
+	<%= form_for(@urlEntry) do |f| %>
+	<div class="url-box">
+		<%= f.label :url %>
+		<%= f.text_field :url %>
+	</div>
+	<div class="short-name-box">
+		<%= f.label :key %>
+		<%= f.text_field :key %>
+	</div>
+	<div class="submit-box">
+		<%= submit_tag "Add" %>
+	</div>
+	<% end %>
+</div>
+<div id="url-list">
+	<table>
+		<thead>
+			<th>Key</th>
+			<th>Url</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+			<% @entries.each do |entry| %>
+			<tr>
+				<td><%= entry.key %></td>
+				<td><%= entry.url %></td>
+				<td><%= link_to "Delete", entry, :confirm => "Are you sure?", :method => :delete %></td
+				</tr>
+				<% end %>
+		</tbody>
+	</table>
+</div>

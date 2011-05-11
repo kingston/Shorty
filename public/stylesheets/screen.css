@@ -14,8 +14,7 @@ body {
   height: 700px;
 }
 
-/* line 17, ../../app/stylesheets/screen.scss */
-#header, #main-content,
+/* line 15, ../../app/stylesheets/screen.scss */
 #wrapper {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -27,25 +26,25 @@ body {
   margin-top: 10px;
 }
 
-/* line 24, ../../app/stylesheets/screen.scss */
+/* line 22, ../../app/stylesheets/screen.scss */
 #header .banner {
   font-size: 3em;
   font-weight: bold;
   color: #DD8811;
 }
-/* line 30, ../../app/stylesheets/screen.scss */
+/* line 28, ../../app/stylesheets/screen.scss */
 #header .subtitle {
   font-weight: bold;
   font-style: italic;
   color: #DD8811;
 }
 
-/* line 37, ../../app/stylesheets/screen.scss */
+/* line 35, ../../app/stylesheets/screen.scss */
 #main-content {
   /* Nothing here */
 }
 
-/* line 41, ../../app/stylesheets/screen.scss */
+/* line 39, ../../app/stylesheets/screen.scss */
 #footer {
   color: #999999;
 }
