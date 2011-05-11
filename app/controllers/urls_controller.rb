@@ -59,7 +59,8 @@ class UrlsController < ApplicationController
   end
 
   def redirect
-    @entry = UrlEntry.find_by_key(params[:key]) || not_found
+    key = params[:key].blank? ? "default" : params[:key]
+    @entry = UrlEntry.find_by_key(key) || not_found
     redirect_to @entry.url
   end
   
