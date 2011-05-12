@@ -3,36 +3,34 @@
 	<%= flash[:notice] %>
 </div>
 <% end %>
-<div id="url-box">
+<div id="new-url-box">
 	<%= form_for(@urlEntry) do |f| %>
-	<div class="url-box">
-		<%= f.label :url %>
-		<%= f.text_field :url %>
-	</div>
-	<div class="short-name-box">
-		<%= f.label :key %>
-		<%= f.text_field :key %>
-	</div>
-	<div class="submit-box">
-		<%= submit_tag "Add" %>
-	</div>
+	<%= f.text_field :url, :class => 'default-label', :title => "URL" %>
+
+	<%= f.text_field :key, :class => 'default-label', :title => "Short Name" %>
+
+	<%= submit_tag "Add" %>
 	<% end %>
 </div>
-<div id="url-list">
+<div id="url-list" cellpadding="0" cellspacing="0">
 	<table>
 		<thead>
-			<th>Key</th>
-			<th>Url</th>
-			<th>Actions</th>
+			<tr>
+				<th>Key</th>
+				<th>Url</th>
+			</tr>
 		</thead>
 		<tbody>
 			<% @entries.each do |entry| %>
 			<tr>
-				<td><%= entry.key %></td>
-				<td><%= entry.url %></td>
-				<td><%= link_to "Delete", entry, :confirm => "Are you sure?", :method => :delete %></td
-				</tr>
-				<% end %>
+				<td class="key-entry"><%= entry.key %></td>
+				<td class="url-entry">
+				<%= link_to truncate(entry.url, :length => 50), entry.url, :title => entry.url %>
+				<span class="hover-delete"><%= link_to image_tag("delete_button.png", :class => "delete-button"),
+					entry, :confirm => "Are you sure you want to delete '#{entry.key}'?", :method => :delete %></span>
+				</td>
+			</tr>
+			<% end %>
 		</tbody>
 	</table>
 </div>
