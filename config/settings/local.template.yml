@@ -1,0 +1,12 @@
+# Version: 1
+# Contains local settings that must be modified for each machine
+
+# IMPORTANT: You need to copy the contents of this file to local.yml and customize accordingly
+
+# Replace with something very random and very long (min 30 chars)
+# Try https://www.grc.com/passwords.htm
+secret_token: ~
+
+# Replace with the BCryptPassword to secure the site with
+# Use Rails Console to generate one
+site_password: ~

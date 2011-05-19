@@ -8,6 +8,10 @@ gem 'rails', '~> 3.0.7'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'jquery-rails', '>= 0.2.6'
 
+# Configuration
+
+gem 'rails_config', '~> 0.2.3'
+
 # Using Compass CSS framework
 
 gem 'compass', '>= 0.11.1'

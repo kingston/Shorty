@@ -4,3 +4,6 @@ log/*.log
 tmp/
 .project
 config/database.yml
+
+config/settings/local.yml
+config/settings/local_*

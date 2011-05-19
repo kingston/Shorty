@@ -65,6 +65,8 @@ GEM
       activesupport (= 3.0.7)
       bundler (~> 1.0)
       railties (= 3.0.7)
+    rails_config (0.2.3)
+      activesupport (~> 3.0)
     railties (3.0.7)
       actionpack (= 3.0.7)
       activesupport (= 3.0.7)
@@ -89,4 +91,5 @@ DEPENDENCIES
   compass-960-plugin
   jquery-rails (>= 0.2.6)
   rails (~> 3.0.7)
+  rails_config (~> 0.2.3)
   sqlite3-ruby
