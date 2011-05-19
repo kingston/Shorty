@@ -12,6 +12,10 @@ gem 'jquery-rails', '>= 0.2.6'
 
 gem 'rails_config', '~> 0.2.3'
 
+# Uploads
+
+gem 'carrierwave', '~> 0.5.4'
+
 # Using Compass CSS framework
 
 gem 'compass', '>= 0.11.1'

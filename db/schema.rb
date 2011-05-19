@@ -10,13 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110428074817) do
+ActiveRecord::Schema.define(:version => 20110519222519) do
 
   create_table "url_entries", :force => true do |t|
     t.string   "key"
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "attachment"
   end
 
 end

@@ -17,7 +17,13 @@ class UrlsController < ApplicationController
   def create
     @urlEntry = UrlEntry.new(params[:url_entry])
     respond_to do |format|
+      @urlEntry.url = "http://www.badattachment.com" unless @urlEntry.attachment.nil?
       if @urlEntry.save
+        #Replace URL
+        unless @urlEntry.attachment.nil?
+          @urlEntry.url = "http://" + request.host + (request.port != 80 ? ":" + request.port.to_s : "") + @urlEntry.attachment.url
+          @urlEntry.save
+        end
         format.html { redirect_to(url_entries_path,
                       :notice => "URL entry successfully added!")}
         format.xml { render :xml => @urlEntry,

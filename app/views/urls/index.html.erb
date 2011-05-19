@@ -4,10 +4,12 @@
 </div>
 <% end %>
 <div id="new-url-box">
-	<%= form_for(@urlEntry) do |f| %>
+	<%= form_for(@urlEntry, :html => { :multipart => true }) do |f| %>
 	<%= f.text_field :url, :class => 'default-label', :title => "URL" %>
 
 	<%= f.text_field :key, :class => 'default-label', :title => "Short Name" %>
+
+	<%= f.file_field :attachment %>
 
 	<%= submit_tag "Add" %>
 	<% end %>

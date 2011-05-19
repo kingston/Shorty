@@ -1,5 +1,6 @@
 class UrlEntry < ActiveRecord::Base
-  attr_accessible :key, :url
+  attr_accessible :key, :url, :attachment
+  mount_uploader :attachment, AttachmentUploader
   
   url_regex = /((?:[a-z][\w-]+:(?:\/{1,3}|[a-z0-9%])|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}\/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?]))/i
 
