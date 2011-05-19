@@ -21,7 +21,7 @@ Settings.reload!
 
 secret_token = Settings.secret_token
 if !secret_token.nil? && !secret_token.empty?
-  Enjuvity::Application.config.secret_token = secret_token
+  Source::Application.config.secret_token = secret_token
 else
   abort "ERROR: No secret token provided.  Please assign a random secret_token to local.yml."
 end

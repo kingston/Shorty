@@ -68,7 +68,7 @@ protected
 
   def authenticate
     authenticate_or_request_with_http_basic do |username, password|
-      Password.new("$2a$10$XAUwYLqAKyOkk2ro9n8Ka.160xDNGP0qwgfI0srzQXUBfzC5I4vsS") == password
+      Password.new(Settings.site_password) == password
     end
   end
 end
