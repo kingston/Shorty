@@ -17,10 +17,10 @@ class UrlsController < ApplicationController
   def create
     @urlEntry = UrlEntry.new(params[:url_entry])
     respond_to do |format|
-      @urlEntry.url = "http://www.badattachment.com" unless @urlEntry.attachment.nil?
+      @urlEntry.url = "http://www.badattachment.com" unless @urlEntry.attachment.blank?
       if @urlEntry.save
         #Replace URL
-        unless @urlEntry.attachment.nil?
+        unless @urlEntry.attachment.blank?
           @urlEntry.url = "http://" + request.host + (request.port != 80 ? ":" + request.port.to_s : "") + @urlEntry.attachment.url
           @urlEntry.save
         end
