@@ -13,7 +13,7 @@ body {
 #wrapper {
   @include border-radius(10px);
   width: 800px;
-  margin: 10px;
+  margin: 10px auto;
   padding: 10px;
   background-color: #FFFFFF;
 }
