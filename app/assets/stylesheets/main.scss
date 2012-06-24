@@ -1,0 +1,108 @@
+/* Contains the bulk of the non-screen styles
+ */
+
+body {
+  font-size: 1.1em;
+}
+
+.title-text {
+  color: #999999;
+  font-style: italic;
+}
+
+a:visited {
+  color: #2200CC;
+}
+
+#new-url-box {
+  input {
+    font-size: 1.8em;
+    padding: 0.2em;
+    @include border-radius(5px);
+  }
+  
+  input[type=text] {
+    @include border-radius(5px);
+    margin-right: 0.3em;
+    text-shadow: 0px 1px 0px #FFFFFF;
+    border: 1px solid #999999;
+    margin-bottom: 10px;
+    @include box-shadow(inset 1px 1px 1px 0 #CCCCCC);
+  }
+  
+  input:focus {
+    @include box-shadow(0 0 5px 2px #AAAAFF);
+  }
+  
+  input[type=submit] {
+    border: 1px solid #9999BB;
+    @include box-shadow(1px 1px 1px 0px #444466);
+    color: #eee;
+    text-transform: uppercase;
+    @include background-image(linear-gradient(top, #444488, #333366));
+  }
+  
+  input[type=submit]:hover {
+    @include background-image(linear-gradient(top, #555599, #444488));
+    cursor: pointer;
+  }
+  
+  #url_entry_url {
+    width: 15em;
+  }
+  
+  #url_entry_key {
+    width: 8em;
+  }
+}
+
+#url-list {
+  table {
+    margin-top: 40px;
+    width: 650px;
+  }
+
+  td, th {
+    padding: 5px;
+  }
+  
+  th {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #EEEEFF;
+  }
+  
+  thead tr {
+    background-color: #EEEEEE;
+  }
+  
+  td.key-entry {
+    width: 8em;
+  }
+  
+  td.url-entry {
+    a {
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    .hover-delete {
+      float: right;
+      display: none;
+    }
+    
+    .delete-button {
+      height: 1em;
+    }
+  }
+  
+  tbody:hover .hover-delete {
+    display: inline;
+  }
+}

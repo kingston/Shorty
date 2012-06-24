@@ -8,3 +8,21 @@ config/database.yml
 config/settings.local.yml
 
 public/uploadssettings.local.yml
+
+*.rbc
+*.sassc
+.sass-cache
+capybara-*.html
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/db/*.sqlite3
+/public/system/*
+/public/uploads
+/coverage/
+/spec/tmp/*
+**.orig
+rerun.txt
+pickle-email-*.html
