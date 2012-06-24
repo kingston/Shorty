@@ -1,24 +1,24 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.7'
+gem 'rails', '~> 3.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem 'jquery-rails', '>= 0.2.6'
+gem 'jquery-rails', '>= 2.0.2'
 
 # Configuration
 
-gem 'rails_config', '~> 0.2.3'
+gem 'rails_config', '~> 0.3.0'
 
 # Uploads
 
-gem 'carrierwave', '~> 0.5.4'
+gem 'carrierwave', '~> 0.6.2'
 
 # Using Compass CSS framework
 
-gem 'compass', '>= 0.11.1'
+gem 'compass', '>= 0.12.1'
 gem 'compass-960-plugin'
 
 # A small bit of security

@@ -8,5 +8,6 @@
 secret_token: ~
 
 # Replace with the BCryptPassword to secure the site with
-# Use Rails Console to generate one
+# Use Rails Console to generate one (include BCrypt,
+# Password.create("password"))
 site_password: ~

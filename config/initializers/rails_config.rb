@@ -1,6 +1,4 @@
-RailsConfig.setup do |config|
-  config.const_name = "Settings"
-end
+# Load configuration before initializers
 
 # Checks for the presence of database.yml
 if !File.exist?("#{Rails.root}/config/database.yml")
@@ -8,20 +6,11 @@ if !File.exist?("#{Rails.root}/config/database.yml")
 end
 
 # Check for a local.yml file
-if !File.exist?("#{Rails.root}/config/settings/local.yml")
+if !File.exist?(Rails.root.join("config", "settings.local.yml").to_s)
   abort "ERROR: local.yml missing.  Please copy config/settings/local.template.yml to config/settings/local.yml and configure it for your machine."
 end
 
-# Add local configuration for settings that are locally overrided
-Settings.add_source!("#{Rails.root}/config/settings/local.yml")
-Settings.add_source!("#{Rails.root}/config/settings/local_#{Rails.root}.yml")
-Settings.reload!
-
-# Load secret token
-
-secret_token = Settings.secret_token
-if !secret_token.nil? && !secret_token.empty?
-  Source::Application.config.secret_token = secret_token
-else
-  abort "ERROR: No secret token provided.  Please assign a random secret_token to local.yml."
+RailsConfig.setup do |config|
+  config.const_name = "Settings"
 end
+
